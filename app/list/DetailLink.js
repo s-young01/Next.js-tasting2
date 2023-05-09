@@ -1,12 +1,14 @@
 'use client'
 
-import { usePathname, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 export default function DetailLink() {
-    let router = useRouter()
-    let a = usePathname()
-    
+    let router = useRouter();
     return (
-        <button onClick={() => { router.prefetch('/detail/') }}>버튼</button>
+        <button onClick={() => { router.back() }} className="back-btn">
+            <FontAwesomeIcon icon={faEllipsisVertical} className="back-icon"/>
+        </button>
     )
 }

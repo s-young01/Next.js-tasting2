@@ -1,16 +1,12 @@
-import { connectDB } from "/util/database";
+import Link from "next/link";
 
 export default async function Home() {
-  // const client = await connectDB;
-  // const db = client.db("forum");
-  // 위의 두 코드를 하나로 축약하기
-  const db = (await connectDB).db("forum");
-  // post컬렉션의 모든 document 가져오기
-  let result = await db.collection("post").find().toArray();
-  console.log(result);
   return (
-    <div>
-      안녕 여기에는 게시판을 만들어볼거야^_^
+    <div className="main-bg">
+      <div className="center">
+        <h1>나의 멋진 게시판</h1>
+        👉<Link href="/list"> 게시판 바로가기 </Link>👈
+      </div>
     </div>
   )
 }
