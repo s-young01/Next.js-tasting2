@@ -21,7 +21,7 @@ export default function Write() {
     return (
         <div className="list-bg">
             <div className="top">
-                <h2>글쓰기 ✍</h2>
+                <h2>글 쓰기 ✍</h2>
                 <DetailLink />
             </div>
             <form action="/api/post/new" method="POST">

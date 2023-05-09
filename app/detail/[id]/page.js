@@ -6,7 +6,6 @@ export default async function Detail(props) {
     // post컬렉션의 하나의 document만 가지고 오기
     // .findOne({찾을document정보})
     let result = await db.collection("post").findOne({ _id : new ObjectId(props.params.id) });
-    console.log(props.params.id);
     return (
         <div>
             <h2>상세 페이지</h2>

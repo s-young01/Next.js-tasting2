@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +12,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='fix'>
+          <div className="navbar"> 
+            <Link href="/" className="logo">Next_Forum</Link>
+            <ul className='menu'>
+              <li>
+                <Link href="/list">게시글</Link>
+              </li>
+              <li>
+                로그인
+              </li>
+              <li>
+                회원가입
+              </li>
+            </ul>   
+          </div>
+        </div>
+        {children}
+      </body>
     </html>
   )
 }
