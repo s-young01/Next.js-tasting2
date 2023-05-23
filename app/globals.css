@@ -64,8 +64,10 @@ input, textarea, button {
     padding: 20px;
     margin-bottom: 5px;
     box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+    opacity: 1;
+    transition: all 0.5s;
 }
-.list-item a:hover {
+.list-item h2:hover {
     text-decoration: underline;
 }
 .list-item a h2 {
@@ -77,14 +79,11 @@ input, textarea, button {
     color: grey;
     margin : 5px 0px;
 }
-.list-item nav {
+.list-item span {
     text-align: right;
-}
-.list-item nav a {
     font-size: 14px;
-}
-.list-item nav a:hover {
-    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
 }
 /* 글 쓰기 버튼 */
 .write-btn {

@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 export default async function handler(res, req) {
     if(res.method == 'POST') {
         if(res.body.title == '' || res.body.content == '') {
-            // 500에러를 내고, edit 페이지로 이동
+            // 500에러를 뱉고, edit 페이지로 이동
             req.status(500).redirect('/edit');
         }else {
             // 수정할 데이터들만 변수에 담기
